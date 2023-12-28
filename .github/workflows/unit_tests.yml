@@ -24,18 +24,7 @@ jobs:
         distribution: 'adopt'
 
     - name: Build with Gradle
-      uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
-      with:
-        arguments: build
-
-    - name: Init gradle wrapper
-      run: gradle wrapper
-
-    - name: Build with Gradle wrapper
-      run: ./gradlew build
-
-    - name: Make gradlew executable
-      run: chmod +x ./gradlew
+      run: chmod +x gradlew
 
     - name: Test with gradle
       run: ./gradlew test
